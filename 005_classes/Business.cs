@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace _005_classes
 {
@@ -53,5 +54,21 @@ namespace _005_classes
             Phone = PhoneNumber;
         }
 
+        public int AverageThreeScores(int a, int b, int c)
+        {
+            int result = (a + b + c) / 3;
+            return result;
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(Name);
+            sb.AppendLine(this.Address);
+            sb.AppendLine(this.Phone);
+            return sb.ToString();
+        }
+
+        
     }
 }
